@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: analytics-event-versioning-reviewer
+version: 0.1.0
+description: Check event schema changes for versioning, compatibility, and consumer migration evidence.
+skills:
+  - analytics-event-versioning-reviewer-skill
+tools:
+  - review-analytics-event-versioning-reviewer
+tags:
+  - data-analytics
+  - evidence-driven

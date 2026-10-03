@@ -1,0 +1,10 @@
+{
+  "event_name": "evidence-record",
+  "schema_changes": [
+    "record-1"
+  ],
+  "compatibility_notes": "Documented evidence and reviewer notes. ",
+  "consumer_migrations": [
+    "record-1"
+  ]
+}

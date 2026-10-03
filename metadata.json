@@ -1,0 +1,29 @@
+{
+  "slug": "analytics-event-versioning-reviewer",
+  "title": "Analytics Event Versioning Reviewer",
+  "category": "data-analytics",
+  "description": "Check event schema changes for versioning, compatibility, and consumer migration evidence.",
+  "fields": {
+    "event_name": {
+      "label": "event name",
+      "kind": "required",
+      "minimum": 0
+    },
+    "schema_changes": {
+      "label": "schema changes",
+      "kind": "list",
+      "minimum": 1
+    },
+    "compatibility_notes": {
+      "label": "compatibility notes",
+      "kind": "text",
+      "minimum": 30
+    },
+    "consumer_migrations": {
+      "label": "consumer migrations",
+      "kind": "list",
+      "minimum": 1
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

@@ -1,0 +1,59 @@
+{
+  "name": "review-analytics-event-versioning-reviewer",
+  "description": "Run Analytics Event Versioning Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "event_name": {
+            "type": "string",
+            "description": "event name"
+          },
+          "schema_changes": {
+            "type": "array",
+            "description": "schema changes"
+          },
+          "compatibility_notes": {
+            "type": "string",
+            "description": "compatibility notes"
+          },
+          "consumer_migrations": {
+            "type": "array",
+            "description": "consumer migrations"
+          }
+        },
+        "required": [
+          "event_name",
+          "schema_changes",
+          "compatibility_notes",
+          "consumer_migrations"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-analytics-event-versioning-reviewer.py",
+    "runtime": "python3"
+  }
+}
